@@ -1,4 +1,4 @@
-package com.lmig.gfc.invoicify.controllers;
+package com.lmig.gfc.invoicify.models;
 
 // This needs to be an entity
 public class InvoiceLineItem {
