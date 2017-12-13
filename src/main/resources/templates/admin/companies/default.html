@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Admin - Invoicify</title>
+<link rel="stylesheet" href="/css/site.css">
+</head>
+<body>
+
+	{{> common/_nav }}
+	<h1>Create a company</h1>
+
+	<form method="post" action="/admin/companies">
+		<input type="text" name="name" placeholder="Company name">
+		<input type="hidden" name="{{ _csrf.parameterName }}" value="{{ _csrf.token }}">
+		<button>Create</button>
+	</form>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Choose a Client - Invoicify</title>
+<link rel="stylesheet" href="/css/site.css">
+</head>
+<body>
+
+	{{> common/_nav }}
+	<h1>Choose a client for which to create an invoice</h1>
+	
+	<ul>
+		{{#clients}}
+		<li>
+			<a href="/invoices/clients/{{ id }}">{{ name }}</a>
+		</li>
+		{{/clients}}
+	</ul>
+
+</body>
+</html>

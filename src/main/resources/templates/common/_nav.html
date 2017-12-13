@@ -1,0 +1,23 @@
+<div>
+	<a href="/">Home</a>
+	
+	{{#user}}
+		{{#canSeeAdmin}}
+		<a href="/admin/companies">Companies</a>		
+		{{/canSeeAdmin}}
+		{{#canSeeInvoices}}
+		<a href="/invoices">Invoices</a>
+		{{/canSeeInvoices}}
+		{{#canSeeBillingRecords}}
+		<a href="/billing-records">Billing Records</a>
+		{{/canSeeBillingRecords}}
+		<form method="post" action="/logout">
+			<button>Logout</button>
+			<input type="hidden" name="{{ _csrf.parameterName }}" value="{{ _csrf.token }}">
+		</form>
+	{{/user}}
+	
+	{{^user}}
+	<a href="/login">Login</a>
+	{{/user}}
+</div>

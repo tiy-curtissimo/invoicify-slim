@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+html, body {
+	font-family: Verdana;
+	font-size: 14px;
+}
+
+form {
+	display: inline;
+}
