@@ -24,7 +24,7 @@ public class AdminCompaniesController {
 	public ModelAndView showDefault() {
 		ModelAndView mv = new ModelAndView("admin/companies/default");
 		
-		mv.addObject("companies", companyRepository.findAll(new Sort("name")));
+		mv.addObject("companies", companyRepository.findAll());
 		
 		return mv;
 	}
